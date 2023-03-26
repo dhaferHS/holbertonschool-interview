@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 """check if the boxes are open or not and if not sherache for the keys if existed and open them"""
 def canUnlockAll(boxes):
-    n = len(boxes)
-    unlocked = [False] * n  # create a list to keep track of unlocked boxes
-    unlocked[0] = True  # mark the first box as unlocked
-    keys = boxes[0]  # get the keys in the first box
-    while keys:
-        key = keys.pop()  # get the next key from the list
-        if not unlocked[key]:  # if the corresponding box is still locked
-            unlocked[key] = True  # unlock the box
-            keys += boxes[key]  # add the keys in the box to the list
+    len(boxes)
+    unlocked = [False] * len(boxes)
+    unlocked[0] = True
+    queue = [0]
+    while queue:
+        box = queue.pop(0)
+        for key in boxes[box]:
+            if key < len(boxes) and not unlocked[key]:
+                unlocked[key] = True
+                queue.append(key)
     return all(unlocked)

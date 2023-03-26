@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""check if the boxes are open or not and if not sherache for the keys if existed and open them"""
 def canUnlockAll(boxes):
     n = len(boxes)
     unlocked = [False] * n  # create a list to keep track of unlocked boxes

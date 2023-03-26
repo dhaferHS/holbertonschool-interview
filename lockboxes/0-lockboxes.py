@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""check if the boxes are open or not and 
+"""check if the boxes are open or not and
 if not sherache for the keys if existed and open them"""
 
 
